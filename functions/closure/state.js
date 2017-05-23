@@ -1,3 +1,5 @@
+"use strict";
+
 var gadgetMaker;
 var gadgetA;
 var gadgetB;
