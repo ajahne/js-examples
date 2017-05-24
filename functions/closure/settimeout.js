@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * use setTimeout as an example to show where closure can be utilized
  */
