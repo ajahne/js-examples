@@ -12,11 +12,12 @@ function addEventListenerToButtons() {
   var i;
   var numberOfButtons = buttonIds.length;
   for (i = 0; i < numberOfButtons; i++) {
-    (function(i) {
+    (function() {
+      var j = i;
       buttons[i].addEventListener('click', function() {
-          console.log(i);
+          console.log(j);
       });
-    }(i));
+    }());
   }
 }
 
