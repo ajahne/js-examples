@@ -15,9 +15,16 @@ function addEventListenerToButtons() {
     (function() {
       var j = i;
       buttons[i].addEventListener('click', function() {
-          console.log(j);
+          logIndex(j);
       });
     }());
+  }
+}
+function addEventListenerToButtonsUsingCallback() {
+  var i;
+  var numberOfButtons = buttonIds.length;
+  for (i = 0; i < numberOfButtons; i++) {
+      buttons[i].onclick = onButtonClick(i);
   }
 }
 
@@ -33,9 +40,21 @@ function getElementById(id) {
   return document.getElementById(id);
 }
 
+function logIndex(index) {
+  console.log(index);
+}
+
 function main() {
   getButtons();
-  addEventListenerToButtons();
+  // addEventListenerToButtons();
+  addEventListenerToButtonsUsingCallback();
 }
+
+function onButtonClick(index) {
+  return function() {
+    logIndex(index);
+  }
+}
+
 
 main();
