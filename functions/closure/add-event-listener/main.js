@@ -1,8 +1,12 @@
 "use strict";
 
 /**
- * addEventListener to each button
- * when button is clicked, log index
+ * Add an EventListener to each button
+ * when the button is clicked, log its corresponding array index
+ *
+ * Help is the first button, so log 0
+ * Back is the second button, so log 1
+ * Next is the third button, so log 2
  */
 
 var buttonIds = ["help", "back", "next"];
@@ -20,6 +24,7 @@ function addEventListenerToButtons() {
     }());
   }
 }
+
 function addEventListenerToButtonsUsingCallback() {
   var i;
   var numberOfButtons = buttonIds.length;
@@ -55,6 +60,5 @@ function onButtonClick(index) {
     logIndex(index);
   }
 }
-
 
 main();
