@@ -8,7 +8,7 @@
  */
 var myDinnerMaker;
 
-function dinnerMaker() {
+function createDinnerMaker() {
   var temperature = 0;
   function setOvenTemperature(value) {
     temperature = value;
@@ -35,6 +35,6 @@ function dinnerMaker() {
 }
 
 //calling the function makeDinner returns an object, this return triggers the closure.
-myDinnerMaker = dinnerMaker();
+myDinnerMaker = createDinnerMaker();
 myDinnerMaker.bakeChicken();
 myDinnerMaker.bakeFish();
