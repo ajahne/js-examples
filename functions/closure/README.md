@@ -13,15 +13,20 @@ A closure is created every time a function is created.
 - state
 
 ## Codepen links
-Privacy  
+Privacy
+<br>
 https://codepen.io/ajahne/pen/BRgXyp
 <br>
-State  
-https://codepen.io/ajahne/pen/gWNVrw?editors=0010  
+State
 <br>
-Add Event Listener  
+https://codepen.io/ajahne/pen/gWNVrw?editors=0010
+<br>
+Add Event Listener
+<br>
 https://codepen.io/ajahne/pen/jmjgLx (incorrect, no additional closure)
+<br>
 https://codepen.io/ajahne/pen/LyKwOE (correct solution with additional closure)
 <br>
 setTimeout
+<br>
 https://codepen.io/ajahne/pen/qmzJgp
