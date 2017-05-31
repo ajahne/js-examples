@@ -12,7 +12,7 @@ A closure is created every time a function is created.
 - privacy
 - state
 
-## Codepen links
+## Codepen links to examples
 Privacy
 <br>
 https://codepen.io/ajahne/pen/BRgXyp
@@ -21,7 +21,7 @@ State
 <br>
 https://codepen.io/ajahne/pen/gWNVrw?editors=0010
 <br><br>
-Add Event Listener
+Loops with addEventListener
 <br>
 https://codepen.io/ajahne/pen/jmjgLx (incorrect, no additional closure)
 <br>
