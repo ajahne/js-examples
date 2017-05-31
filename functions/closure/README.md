@@ -16,17 +16,17 @@ A closure is created every time a function is created.
 Privacy
 <br>
 https://codepen.io/ajahne/pen/BRgXyp
-<br>
+<br><br>
 State
 <br>
 https://codepen.io/ajahne/pen/gWNVrw?editors=0010
-<br>
+<br><br>
 Add Event Listener
 <br>
 https://codepen.io/ajahne/pen/jmjgLx (incorrect, no additional closure)
 <br>
 https://codepen.io/ajahne/pen/LyKwOE (correct solution with additional closure)
-<br>
+<br><br>
 setTimeout
 <br>
 https://codepen.io/ajahne/pen/qmzJgp
