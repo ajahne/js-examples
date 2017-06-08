@@ -1,4 +1,4 @@
-(function IFFE() {
+(function() {
   console.log('IFFE');
 }());
   
