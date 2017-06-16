@@ -15,3 +15,8 @@ const message = 'Hello World';
 (() => {
   console.log('IFFE - ES6');
 })();
+
+//ES6 with aguments
+(msg => {
+  console.log(msg + 'ES6');
+})(message);
