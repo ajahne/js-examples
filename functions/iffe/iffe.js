@@ -1,4 +1,4 @@
-var message = 'Hello World';
+const message = 'Hello World';
 
 //ES5
 (function() {
