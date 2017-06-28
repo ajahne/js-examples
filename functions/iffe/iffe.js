@@ -10,6 +10,11 @@ const message = 'Hello World';
   console.log(msg);
 }(message));
   
+//es5 named function experssion
+(function logMessage(msg) {
+  console.log(msg);
+}(message));
+
 //ES6 Arrow functions
 //notice the ending call '()' is outside the enclosing parenthesis
 (() => {
