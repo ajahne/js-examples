@@ -1,5 +1,5 @@
-var a = 5;
-var b = 10;
+const a = 5;
+const b = 10;
 
 (() => {
   var b = 3;
