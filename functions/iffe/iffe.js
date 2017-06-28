@@ -10,7 +10,7 @@ const message = 'Hello World';
   console.log(msg);
 }(message));
   
-//es5 named function experssion
+//ES5 named function expression
 (function logMessage(msg) {
   console.log(msg);
 }(message));
