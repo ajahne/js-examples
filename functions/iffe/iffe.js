@@ -25,3 +25,8 @@ const message = 'Hello World';
 (msg => {
   console.log(msg + 'ES6');
 })(message);
+
+//ES6 with two args
+((msg,version) => {
+  console.log(msg + version);
+})(message, 'ES6');
