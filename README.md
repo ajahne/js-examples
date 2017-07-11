@@ -8,3 +8,5 @@ These examples will span core JavaScript principles and concepts.
 - scope
 - closure
 - IFFE
+- revealing module pattern
+- ES6 arrow functions
