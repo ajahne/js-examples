@@ -9,4 +9,8 @@ These examples will span core JavaScript principles and concepts.
 - closure
 - IFFE
 - revealing module pattern
-- ES6 arrow functions
+- ES6
+  - const
+  - block scope (let)
+  - arrow functions
+  - modules
