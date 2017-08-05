@@ -2,8 +2,8 @@ const a = 5;
 const b = 10;
 
 (() => {
-  var b = 3;
-  var add = () => (a+b);
+  let b = 3;
+  let add = () => (a+b);
   console.log(add());
 })();
 
