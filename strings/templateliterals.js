@@ -23,3 +23,22 @@ console.log(multiLineTheOldWay);
 console.log(multiLineTheOldWayWithReturnChar);
 console.log(multiLine === multiLineTheOldWay); //true
 console.log(multiLine === multiLineTheOldWayWithReturnChar); //false
+
+//string concatenation and template literal
+const a = 5;
+const b = 5;
+const add = (a,b) => a+b;
+//standard concatenation
+const oldAndBusted = a + ' + ' + b + ' = ' + add(a,b);
+//template literal
+const newHotness = `${a} + ${b} = ${add(a,b)}`;
+
+
+console.log(oldAndBusted);                    //5 + 5 = 10
+console.log(newHotness);                      //5 + 5 = 10
+console.log(oldAndBusted === newHotness);     //true  
+
+
+//console support, but would not help if we need the result 
+//to use in our code and not just something that we need to log out
+console.log('%o + %o = %o', a, b, add(a,b));  //5 + 5 = 10
