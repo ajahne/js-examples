@@ -1,4 +1,3 @@
-//includes, startsWidth, endsWidth()
 const str = ' Hello World';
 
 //includes
@@ -21,3 +20,12 @@ console.log(str.endsWith('d'));           //true
 console.log(str.endsWith('D'));           //false
 console.log(str.endsWith('World'));       //true
 console.log(str.endsWith(' World'));      //true
+
+//repeat (arg must be >= 0)
+console.log(`
+repeat:`);
+console.log('x'.repeat(5));               //xxxxx
+console.log('x'.repeat(1));               //x
+console.log('x'.repeat(0));               //''
+console.log('x'.repeat(0) === '');        //true
+console.log(str.repeat(2));               // Hello World Hello World
