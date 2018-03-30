@@ -16,7 +16,10 @@ console.log(templateMsg === msg); //true
 //multi-line strings
 const multiLine = `line 1
 line 2`;
-const multiLineTheOldWay = `line 3\nline 4`;
+const multiLineTheOldWay = `line 1\nline 2`;
+const multiLineTheOldWayWithReturnChar = `line 1\rline 2`;
 console.log(multiLine);
 console.log(multiLineTheOldWay);
-console.log(multiLine === multiLineTheOldWay); //false
+console.log(multiLineTheOldWayWithReturnChar);
+console.log(multiLine === multiLineTheOldWay); //true
+console.log(multiLine === multiLineTheOldWayWithReturnChar); //false
