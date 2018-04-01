@@ -8,7 +8,7 @@ for (let i = 0; i < list.length; i++) {
 
 //can perform the same, but cannot use break and continue
 console.log('\nforEach');
-list.forEach((element, index, array)=>{
+list.forEach((element, index, array) => {
   console.log(`list[${index}]: ${element}`);
 });
 
@@ -33,7 +33,6 @@ for (let i in list) {
   console.log(`list[${i}]: ${list[i]}`); 
 }
 
-
 //for of iterates through the values in the array
 console.log('\nfor of');
 for (let i of list) {
@@ -53,4 +52,3 @@ const iterator = a.entries();
 for (let e of iterator) {
   console.log(e);
 }
-
