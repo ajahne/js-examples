@@ -19,8 +19,8 @@ arrowEcho();              //Arrow it up
  * Default paramers with expressions 
  */
 
-const value = 10;
-function getValue() {
+const defaultValue = 10;
+function getValue(value=defaultValue) {
   return  value;
 }
 
