@@ -30,3 +30,13 @@ function printValue(msg, value=getValue()) {
 
 printValue('value =', 25);    //value = 25
 printValue('defaultValue is'); //default value is 10
+
+
+//setting decond param to default to the value of the first
+const add = (a, b=a) => {
+  return a + b
+}
+
+console.log(add(1));       //2
+console.log(add(1,1));     //2
+console.log(add(1,5));     //6
