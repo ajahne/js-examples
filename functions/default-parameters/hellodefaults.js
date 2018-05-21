@@ -32,11 +32,27 @@ printValue('value =', 25);    //value = 25
 printValue('defaultValue is'); //default value is 10
 
 
-//setting decond param to default to the value of the first
+//setting second param to default to the value of the first
 const add = (a, b=a) => {
   return a + b
 }
 
-console.log(add(1));       //2
-console.log(add(1,1));     //2
-console.log(add(1,5));     //6
+console.log(add(1));                //2
+console.log(add(1,1));              //2
+console.log(add(1,5));              //6
+console.log(add(5,1));              //6
+console.log(add(1,undefined));      //2
+console.log(add(undefined,1));      //NaN
+
+//setting first param to default to the value of the second
+console.log('***add2 examples***');
+const add2 = (a=b, b) => {
+  return a + b
+}
+
+console.log(add2(1));                //NaN
+console.log(add2(1,1));              //2
+console.log(add2(1,5));              //6
+console.log(add2(5,1));              //6
+console.log(add2(1,undefined));      //NaN
+console.log(add2(undefined,1));      //ReferenceError
