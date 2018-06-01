@@ -40,3 +40,36 @@ console.log(echo2(getMessage()));
  const multiply = (x,y) => {
    return x*y;
  }
+
+
+ /************************
+ * Trying out properties
+ ************************/
+function awesomeDeclaration() {}
+const awesomeArrow = () => {};
+
+function printProps(fn) {
+  console.log(fn.name);
+}
+
+printProps(awesomeDeclaration);
+printProps(awesomeArrow);
+
+/************************
+ * Trying out Constructors and new
+ ************************/
+
+function Constructor() {
+  console.log(new.target);
+}
+
+const Constructor2 = () => {
+  //SyntaxError: new.target only allowed within functions
+  //console.log(new.target);
+}
+
+const c = Constructor();        //undefined
+const c2 = new Constructor();   //[Function: Constructor]
+
+const ca = Constructor2();        //Fine, exectues as expected
+const ca2 = new Constructor2();   //TypeError: Constructor2 is not a constructor
