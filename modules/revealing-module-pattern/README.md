@@ -1,4 +1,4 @@
-## Outline
+## Contents
 - Definition
 - Examples
 - References
@@ -14,7 +14,7 @@ Note: use [Modern Modules](https://ajahne.github.io/blog/javascript/2018/01/23/j
 - encapsulate functionality
 - privacy
 
-## Examples:
+## Examples
 Note: All examples are provided in ES5 syntax. If using modern browsers, prefer [modern modules](https://ajahne.github.io/blog/javascript/2018/01/23/javascript-import-export-intro.html).
 ```
 var module = function() {
