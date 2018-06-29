@@ -61,4 +61,5 @@ myModule.publicMethod();
 - [Original Post on the Revealing Module Pattern](https://christianheilmann.com/2007/08/22/again-with-the-module-pattern-reveal-something-to-the-world/) by Christian Heilmann 
 - Revealing Module Pattern from [O'REILLY](https://www.safaribooksonline.com/library/view/learning-javascript-design/9781449334840/ch09s03.html)
 - [Todd Moto On Mastering the Module Pattern](https://toddmotto.com/mastering-the-module-pattern/)
+- Revealinbg Module Pattern defintion on [JargonJS](http://jargon.js.org/_glossary/REVEALING_MODULE_PATTERN.md)
 
