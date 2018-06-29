@@ -1,17 +1,17 @@
 ## Outline
 - Definition
 - Examples
-- Referencences
+- References
 
 ## Definition
-The revealing module pattern is a way to organize our code to obtain reusability and obtain separation between public and private fuctionality. At its core the pattern is a function that returns an object.
+The revealing module pattern is a way to organize our code to obtain reusability and obtain separation between public and private functionality. At its core the pattern is a function that returns an object.
 
 Note: use [Modern Modules](https://ajahne.github.io/blog/javascript/2018/01/23/javascript-import-export-intro.html) where available.
 
 ### Why use it?
 - reduce global scope pollution
 - promote code reuse
-- encapsulate fucntionality
+- encapsulate functionality
 - privacy
 
 ## Examples:
