@@ -15,7 +15,7 @@ Note: use [Modern Modules](https://ajahne.github.io/blog/javascript/2018/01/23/j
 - privacy
 
 ## Examples:
-Note: All examples provided in ES5 syntax, if using modern browsers, utilize [modern modules](https://ajahne.github.io/blog/javascript/2018/01/23/javascript-import-export-intro.html)
+Note: All examples provided in ES5 syntax, if using modern browsers, prefer [modern modules](https://ajahne.github.io/blog/javascript/2018/01/23/javascript-import-export-intro.html).
 ```
 var module = function() {
   function privateMethod() {
