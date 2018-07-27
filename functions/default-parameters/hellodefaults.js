@@ -33,6 +33,7 @@ printValue('defaultValue is'); //default value is 10
 
 
 //setting second param to default to the value of the first
+//only works if the first param is defined when the function is called, see examples below
 const add = (a, b=a) => {
   return a + b
 }
