@@ -57,6 +57,7 @@ printProps(awesomeArrow);
 
 /************************
  * Trying out Constructors and new
+ * Arrow functions cannot be used as constructors
  ************************/
 
 function Constructor() {
@@ -64,7 +65,7 @@ function Constructor() {
 }
 
 const Constructor2 = () => {
-  //SyntaxError: new.target only allowed within functions
+  //SyntaxError: new.target only allowed within functions, not arrow functions
   //console.log(new.target);
 }
 
