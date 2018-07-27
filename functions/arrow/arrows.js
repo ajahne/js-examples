@@ -10,7 +10,7 @@ const greet = () => {
 //automatically returns result of statment when no brackets exist
 const getMessage = () => 'Hola, Mars';
 
-//most explicitily return statement when brackets are used
+//must explicitily have return statement when brackets are used
 const getMessage2 = () => {
   return 'Hola, Mars';
 }
@@ -42,7 +42,7 @@ console.log(echo2(getMessage()));
  }
 
 
- /************************
+/************************
  * Trying out properties
  ************************/
 function awesomeDeclaration() {}
