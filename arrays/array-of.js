@@ -19,3 +19,8 @@ const c = Array.of(b);
 const d = new Array(b);
 console.log(c); //[ [ 1, 2, 3, 4, 5 ] ]
 console.log(d); //[ [ 1, 2, 3, 4, 5 ] ]
+
+const c1 = new Array(1,2,3,4,5);
+const c2 = Array.of(1,2,3,4,5);
+console.log(c1);  //[1, 2, 3, 4, 5]
+console.log(c2);  //[1, 2, 3, 4, 5]
