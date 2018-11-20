@@ -38,4 +38,4 @@ console.log(newBoard);      //[ -1, -1, -1, -1, -1 ]
 
 //or better yet...
 const newBoard2 = Array(length).fill(-1);
-console.log(newBoard2);
+console.log(newBoard2);     //[ -1, -1, -1, -1, -1 ]
