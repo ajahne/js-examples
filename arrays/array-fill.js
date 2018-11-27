@@ -1,5 +1,5 @@
 //will not change the length of the array
-const a = [];//Array.of();
+const a = [];
 console.log(a);             //[]
 const b = a.fill(0, 1, 3);
 console.log(a);             //[]
