@@ -10,8 +10,8 @@ console.log(c.fill(0, 1));  //[1,0,0]
 
 const d = Array(5).fill(0);
 console.log(d);             //[0,0,0,0,0]
-const e = Array(5);
-console.log(e);             //[undefined,undefined,undefined,undefined,undefined];
+const e = Array(5).fill(0,1,4);
+console.log(e);             //[undefined, 0, 0, 0, undefined];
 
 //scenario:
 //what if you have a game board represented by an array and you wanted to
