@@ -5,6 +5,8 @@ These examples will span core JavaScript principles and concepts.
 ## Topics Include
 - call, apply, and bind
 - objects
+- functions
+- arrays 
 - scope
 - closure
 - timers (e.g. setTimeout, setInterval)
