@@ -10,6 +10,7 @@ These examples will span core JavaScript principles and concepts.
 - scope
 - closure
 - timers (e.g. setTimeout, setInterval)
+- loops
 - IFFE
 - revealing module pattern
 - ES6
