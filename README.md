@@ -14,8 +14,11 @@ These examples will span core JavaScript principles and concepts.
 - strings
 - IFFE
 - revealing module pattern
+- promises
 - ES6
   - const, let
   - block scope
   - arrow functions
   - modules
+  - classes
+  - async
