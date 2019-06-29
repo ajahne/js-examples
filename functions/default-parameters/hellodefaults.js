@@ -5,7 +5,6 @@ function echo(msg='Hello World') {
 echo('Hola Mars');    //Hola Mars
 echo();               //Hello World
 
-
 //note: parens are required when using default parameters
 const arrowEcho = (msg='Arrow it up') => {
   console.log(msg)
@@ -14,9 +13,8 @@ const arrowEcho = (msg='Arrow it up') => {
 arrowEcho('Arrowing...'); //Arrowing...
 arrowEcho();              //Arrow it up
 
-
 /*
- * Default paramers with expressions 
+ * Default paramers with expressions
  */
 
 const defaultValue = 10;
@@ -30,7 +28,6 @@ function printValue(msg, value=getValue()) {
 
 printValue('value =', 25);    //value = 25
 printValue('defaultValue is'); //default value is 10
-
 
 //setting second param to default to the value of the first
 //only works if the first param is defined when the function is called, see examples below
