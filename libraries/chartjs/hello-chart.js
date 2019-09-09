@@ -1,4 +1,5 @@
 // source: https://www.chartjs.org/docs/latest/getting-started/
+// helpful link: https://stackoverflow.com/questions/37621020/setting-width-and-height
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
@@ -38,6 +39,3 @@ const myChart = new Chart(ctx, {
         }
     }
 });
-
-// myChart.canvas.parentNode.style.height = '128px';
-// myChart.canvas.parentNode.style.width = '128px';
