@@ -1,5 +1,6 @@
 // source: https://www.chartjs.org/docs/latest/getting-started/
 // helpful link: https://stackoverflow.com/questions/37621020/setting-width-and-height
+// another one: https://stackoverflow.com/questions/20206038/converting-chart-js-canvas-chart-to-image-using-todataurl-results-in-blank-im
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'bar',
