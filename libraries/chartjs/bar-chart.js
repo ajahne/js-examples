@@ -1,6 +1,6 @@
 // source: https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/
 // Bar chart
-new Chart(document.getElementById("myChart"), {
+const myChart = new Chart(document.getElementById("my-chart"), {
     type: 'bar',
     data: {
       labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
@@ -13,6 +13,14 @@ new Chart(document.getElementById("myChart"), {
       ]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: {
+        onComplete: function(animation) {
+          createImage(myChart);
+        },
+        duration: 1,
+      },
       legend: { display: false },
       title: {
         display: true,
