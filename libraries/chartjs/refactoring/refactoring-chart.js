@@ -3,11 +3,11 @@
 // another one: https://stackoverflow.com/questions/20206038/converting-chart-js-canvas-chart-to-image-using-todataurl-results-in-blank-im
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-    type: 'horizontalBar',
+    type: 'bar',
     data: {
         labels: [
          "Extract Function",
-         "Change Function Declaration",
+         "Change Fn Declaration",
          "Inline Function",
          "Move Function",
          "Inline Variable",
@@ -139,8 +139,16 @@ const myChart = new Chart(ctx, {
     options: {
         // responsive: true,
         // maintainAspectRatio: false,
+        // animation: {
+        //   duration: 0 // general animation time
+        // },
+        responsive: true,
+        maintainAspectRatio: false,
         animation: {
-          duration: 0 // general animation time
+          onComplete: function(animation) {
+            createImage(myChart, 1900, 1500);
+          },
+          duration: 1,
         },
         scales: {
             yAxes: [{

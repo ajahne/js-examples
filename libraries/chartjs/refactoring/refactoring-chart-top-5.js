@@ -6,11 +6,11 @@ const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
         labels: [
-         "Extract Function",
-         "Change Function Declaration",
-         "Inline Function",
-         "Move Function",
-         "Inline Variable",
+         "Extract Function (85)",
+         "Change Function Declaration (45)",
+         "Inline Function (34)",
+         "Move Function (32)",
+         "Inline Variable (18)",
         ],
         datasets: [{
             label: '# of References',

@@ -3,7 +3,8 @@
 // another one: https://stackoverflow.com/questions/20206038/converting-chart-js-canvas-chart-to-image-using-todataurl-results-in-blank-im
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-    type: 'horizontalBar',
+    type: 'bar',
+    backgroundColor: '#ff0000',
     data: {
         labels: [
          "Extract Function",
@@ -18,7 +19,7 @@ const myChart = new Chart(ctx, {
          "Remove Dead Code",
         ],
         datasets: [{
-            label: '# of References',
+            label: 'Number of References',
             data: [
              85,
              45,
@@ -60,15 +61,42 @@ const myChart = new Chart(ctx, {
         }]
     },
     options: {
+      title: {
+        text: 'Number of References',
+        display: true,
+        fontSize: 20
+      },
+      legend: {
+          display: false,
+          labels: {
+            fontSize: 15,
+              // fontColor: 'rgb(255, 99, 132)'
+          }
+      },
         // responsive: true,
         // maintainAspectRatio: false,
+        // animation: {
+        //   duration: 0 // general animation time
+        // },
         animation: {
-          duration: 0 // general animation time
+          onComplete: function(animation) {
+            createImage(myChart, 1258, 629);
+          },
+          duration: 1,
         },
         scales: {
+          // pointLabels: {
+          //   fontSize: 20,
+          // },
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    fontSize: 16,
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontSize: 16,
                 }
             }]
         }
