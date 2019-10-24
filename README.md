@@ -6,7 +6,7 @@ These examples will span core JavaScript principles and concepts.
 - call, apply, and bind
 - objects
 - functions
-- arrays 
+- arrays
 - scope
 - closure
 - timers (e.g. setTimeout, setInterval)
@@ -15,6 +15,8 @@ These examples will span core JavaScript principles and concepts.
 - IFFE
 - revealing module pattern
 - promises
+- data structures (from scratch)
+- sorting algorithms (from scratch)
 - ES6
   - const, let
   - block scope
