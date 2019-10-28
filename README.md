@@ -1,5 +1,5 @@
 # js-examples
-JavaScript examples and learnings to share with developers and on blogs/reading lists.  
+JavaScript examples and learning to share with developers and on blogs/reading lists.  
 These examples will span core JavaScript principles and concepts.
 
 ## Topics Include
@@ -15,8 +15,9 @@ These examples will span core JavaScript principles and concepts.
 - IFFE
 - revealing module pattern
 - promises
-- data structures (from scratch)
-- sorting algorithms (from scratch)
+- data structures (e.g. linked lists, hash tables, etc.)
+- sorting algorithms (e.g. merge sort, quick sort, etc.)
+- searching algorithms (e.g. binary search, BFS, DFS, etc.)
 - ES6
   - const, let
   - block scope
