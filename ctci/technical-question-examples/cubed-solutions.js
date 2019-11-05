@@ -42,5 +42,22 @@ function printSolutionsBrute() {
   }
 }
 
+function printSolutionsBetter() {
+  for (let i = 1; i <= n; i++) {
+    a = i;
+    for (let j = 1; j <= n; j++) {
+      b = j;
+      for (let k = 1; k <= n; k++) {
+        c = k;
+        d = Math.round(Math.pow(cubed(a) + cubed(b) - cubed(c), 1/3));
+        if (cubed(a) + cubed(b) === cubed(c) + cubed(d) && 0 <= d && d <= n) {
+          numSolutions++;
+          console.log(`Solutions ${a}, ${b}, ${c}, ${d}`);
+        }
+      }
+    }
+  }
+}
+
 printSolutionsBrute();
 console.log(numSolutions);
