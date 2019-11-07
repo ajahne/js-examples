@@ -8,6 +8,41 @@ function linkedList() {
     pointHeadToNode(node);
   }
 
+  function append(value) {
+    if (isEmpty()) {
+      add(value);
+    } else {
+      const node = makeNode(value);
+      pointNodeToTail(node);
+      pointLastNodeToCurrentNode(node);
+    }
+  }
+
+  function pointLastNodeToCurrentNode(node) {
+    //find last node
+    const lastNode = findLastNode();
+    //change link of last node to node
+    lastNode.link = node;
+  }
+
+  function findLastNode() {
+    //loop through all nodes
+    //once node.link === null (i.e. tail), we've found it
+    let currentNode = head;
+    // console.log(head);
+    let lastNode;
+    do {
+      if (currentNode.link === tail) {
+        lastNode = currentNode;
+        break;
+      } else {
+        currentNode = currentNode.link;
+      }
+    } while (currentNode)
+
+    return lastNode;
+  }
+
   function isEmpty() {
     return head === null;
   }
@@ -21,6 +56,10 @@ function linkedList() {
 
   function pointNodeToHead(node) {
     node.link = head;
+  }
+
+  function pointNodeToTail(node) {
+    node.link = tail;
   }
 
   function pointHeadToNode(node) {
@@ -43,17 +82,8 @@ function linkedList() {
 
   return {
     add,
+    append,
     isEmpty,
-    print
+    print,
   }
 }
-
-const list = linkedList();
-console.log(list.isEmpty()); //true
-list.add(5);
-console.log(list.isEmpty()); //false
-list.add(2);
-list.add(12);
-list.add(15);
-console.log(list.isEmpty()); //false
-list.print(); //15, 12, 2, 5
