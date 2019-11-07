@@ -1,5 +1,3 @@
-//Note: at this point, have not tested for empty, nore are handling empty very well (assuming)
-
 function linkedList() {
   let head = null;
   let tail = null;
@@ -8,6 +6,10 @@ function linkedList() {
     const node = makeNode(value);
     pointNodeToHead(node);
     pointHeadToNode(node);
+  }
+
+  function isEmpty() {
+    return head === null;
   }
 
   function makeNode(value) {
@@ -23,7 +25,6 @@ function linkedList() {
 
   function pointHeadToNode(node) {
     head = node;
-    //now should this be something like head.link = node?
   }
 
   function print() {
@@ -42,13 +43,17 @@ function linkedList() {
 
   return {
     add,
+    isEmpty,
     print
   }
 }
 
 const list = linkedList();
+console.log(list.isEmpty()); //true
 list.add(5);
+console.log(list.isEmpty()); //false
 list.add(2);
 list.add(12);
 list.add(15);
+console.log(list.isEmpty()); //false
 list.print(); //15, 12, 2, 5
