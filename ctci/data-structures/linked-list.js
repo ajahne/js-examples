@@ -19,18 +19,13 @@ function linkedList() {
   }
 
   function pointLastNodeToCurrentNode(node) {
-    //find last node
     const lastNode = findLastNode();
-    //change link of last node to node
     lastNode.link = node;
   }
 
   function findLastNode() {
-    //loop through all nodes
-    //once node.link === null (i.e. tail), we've found it
-    let currentNode = head;
-    // console.log(head);
     let lastNode;
+    let currentNode = head;
     do {
       if (currentNode.link === tail) {
         lastNode = currentNode;
