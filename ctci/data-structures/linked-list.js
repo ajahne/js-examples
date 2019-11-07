@@ -1,3 +1,5 @@
+//Note: at this point, have not tested for empty, nore are handling empty very well (assuming)
+
 function linkedList() {
   let head = null;
   let tail = null;
