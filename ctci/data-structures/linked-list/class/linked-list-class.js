@@ -1,3 +1,10 @@
+class Node {
+  constructor (data, link) {
+    this.data = data;
+    this.link = link;
+  }
+}
+
 class LinkedList {
   constructor() {
     this.head = null;
@@ -44,11 +51,8 @@ class LinkedList {
     return this.head === null;
   }
 
-  makeNode(value) {
-    return {
-      data: value,
-      link: null
-    }
+  makeNode(data) {
+    return new Node(data, null);
   }
 
   pointNodeToHead(node) {
