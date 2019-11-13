@@ -70,8 +70,14 @@ list.add(4);
 list.add(3);
 list.add(2);
 list.add(1);
-
 list.print();
+
 console.log();
 list.append(6);
+list.print();
+
+console.log();
+list.append(7);
+list.add(0);
+list.append(8);
 list.print();
