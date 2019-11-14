@@ -31,6 +31,7 @@ class LinkedList {
     if (this.isEmpty()) {
       return false;
     }
+
     //if only one element
     if (this.head.next === null) {
       this.head = null;
@@ -39,18 +40,27 @@ class LinkedList {
 
     //else find the node to delete
     let currentNode = this.head;
+
+    //if head node to be deleted
+    if (currentNode.data === data) {
+      this.head = this.head.next;
+      currentNode = null;
+      return true;
+    }
+
     while(currentNode) {
       //if node found
       if (currentNode.next.data === data) {
-        // let nodeToDelete = currentNode.next;
-        // currentNode.next = currentNode.next.next;
         let nodeToDelete = currentNode.next;
         currentNode.next = nodeToDelete.next;
         nodeToDelete = null;
-        break;
+        // break;
+        return true;
       }
       currentNode = currentNode.next;
     }
+
+    return false;
   }
 
   pointLastNodeToCurrentNode(node) {
@@ -135,13 +145,26 @@ list.add(1);
 list.append(4);
 list.append(5);
 list.print();
+
 console.log();
 list.delete(3);
 list.print();
+
 console.log();
 list.delete(5);
 list.print();
+
 console.log();
 list.append(7);
 list.add(0);
+list.print();
+
+console.log();
+list.delete(0);
+list.print();
+
+console.log();
+list.delete(1);
+list.add(-1);
+list.append(10)
 list.print();
