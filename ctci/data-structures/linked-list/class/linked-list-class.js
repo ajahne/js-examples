@@ -11,17 +11,17 @@ class LinkedList {
     this.tail = null;
   }
 
-  add(value) {
-    const node = this.makeNode(value);
+  add(data) {
+    const node = this.makeNode(data);
     this.pointNodeToHead(node);
     this.pointHeadToNode(node);
   }
 
-  append(value) {
+  append(data) {
     if (this.isEmpty()) {
-      this.add(value);
+      this.add(data);
     } else {
-      const node = this.makeNode(value);
+      const node = this.makeNode(data);
       this.pointNodeToTail(node);
       this.pointLastNodeToCurrentNode(node);
     }
