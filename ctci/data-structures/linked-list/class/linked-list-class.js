@@ -1,7 +1,7 @@
 class Node {
-  constructor (data, link) {
+  constructor (data, next) {
     this.data = data;
-    this.link = link;
+    this.next = next;
   }
 }
 
@@ -29,18 +29,18 @@ class LinkedList {
 
   pointLastNodeToCurrentNode(node) {
     const lastNode = this.findLastNode();
-    lastNode.link = node;
+    lastNode.next = node;
   }
 
   findLastNode() {
     let lastNode;
     let currentNode = this.head;
     do {
-      if (currentNode.link === this.tail) {
+      if (currentNode.next === this.tail) {
         lastNode = currentNode;
         break;
       } else {
-        currentNode = currentNode.link;
+        currentNode = currentNode.next;
       }
     } while (currentNode)
 
@@ -56,11 +56,11 @@ class LinkedList {
   }
 
   pointNodeToHead(node) {
-    node.link = this.head;
+    node.next = this.head;
   }
 
   pointNodeToTail(node) {
-    node.link = this.tail;
+    node.next = this.tail;
   }
 
   pointHeadToNode(node) {
@@ -72,7 +72,7 @@ class LinkedList {
       let currentNode = this.head;
       do {
         console.log(`currentNode.data = ${currentNode.data}`);
-        currentNode = currentNode.link;
+        currentNode = currentNode.next;
       } while (currentNode)
     }
     else {
@@ -89,4 +89,5 @@ list.print();
 
 console.log();
 list.append(6);
+list.add(2);
 list.print();
