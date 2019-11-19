@@ -27,12 +27,18 @@ class LinkedList {
     }
   }
 
+  /**
+   *
+   * Return undefined (instead of null) as undefined means this that a value was never
+   * set for this index. If undefined, we could get confused between an object that was
+   * set to null and this function not finding an element in that index
+   */
   get(index) {
     let counter = 0;
     let currentNode = this.head;
 
     if (this.isEmpty()) {
-      return null;
+      return undefined;
     }
 
     while (currentNode) {
@@ -43,7 +49,7 @@ class LinkedList {
       counter++;
     }
 
-    return null;
+    return undefined;
   }
 
   delete(data) {
