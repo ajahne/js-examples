@@ -95,6 +95,7 @@ class LinkedList {
         currentNode = currentNode.next;
         i++;
       }
+      return false;
     } else {
       return false;
     }
@@ -204,7 +205,10 @@ list.print(); //a,b,c,d,e
 console.log(list.insertAfter(-1)); //false
 
 console.log();
-
 console.log(list.insertAfter('z', 2)); //true
+list.print(); //a,b,c,z,d,e
 
+
+console.log();
+console.log(list.insertAfter('q', 17)); //false
 list.print(); //a,b,c,z,d,e
