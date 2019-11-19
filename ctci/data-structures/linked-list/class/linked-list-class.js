@@ -67,6 +67,39 @@ class LinkedList {
     return undefined;
   }
 
+  indexOf(data) {
+    let index = 0;
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.data == data) {
+        return index;
+      }
+      currentNode = currentNode.next;
+      index++;
+    }
+    return undefined;
+  }
+
+  insertAfter(data, index) {
+    if (index > -1) {
+      let i = 0;
+      let currentNode = this.head;
+
+      while (currentNode) {
+        if (i === index) {
+          const node = new Node(data);
+          node.next = currentNode.next;
+          currentNode.next = node;
+          return true;
+        }
+        currentNode = currentNode.next;
+        i++;
+      }
+    } else {
+      return false;
+    }
+  }
+
   delete(data) {
     if (this.isEmpty()) {
       return false;
@@ -156,3 +189,22 @@ class LinkedList {
     }
   }
 }
+
+// 0 check
+const list = new LinkedList();
+console.log(list.indexOf(5)); //undefined
+
+list.add('e');
+list.add('d');
+list.add('c');
+list.add('b');
+list.add('a');
+
+list.print(); //a,b,c,d,e
+console.log(list.insertAfter(-1)); //false
+
+console.log();
+
+console.log(list.insertAfter('z', 2)); //true
+
+list.print(); //a,b,c,z,d,e
