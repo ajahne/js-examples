@@ -52,6 +52,21 @@ class LinkedList {
     return undefined;
   }
 
+  getData(index) {
+    let counter = 0;
+    let currentNode = this.head;
+
+    while(currentNode) {
+      if(counter === index) {
+        return currentNode.data;
+      }
+      currentNode = currentNode.next;
+      counter++;
+    }
+
+    return undefined;
+  }
+
   delete(data) {
     if (this.isEmpty()) {
       return false;
@@ -141,18 +156,3 @@ class LinkedList {
     }
   }
 }
-
-const list = new LinkedList();
-list.add('e');  //4
-list.add('d');  //3
-list.add('c');  //2
-list.add('b');  //1
-list.add('a');  //0
-
-list.print();
-
-console.log(list.get(2)) //c
-console.log(list.get(0)) //a
-console.log(list.get(4)) //e
-console.log(list.get(17)) //null
-console.log(list.get(-1)) //null
