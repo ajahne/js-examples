@@ -101,6 +101,29 @@ class LinkedList {
     }
   }
 
+  dedup() {
+    let currentNode = this.head;
+    let runner;
+    let runnerPrev;
+
+    while (currentNode) {
+      runner = currentNode.next;
+      runnerPrev = currentNode;
+      while (runner) {
+        if (currentNode.data == runner.data) {
+          let nodeToDelete = runner;
+          runnerPrev.next = runner.next
+          runner = runnerPrev.next;
+          nodeToDelete = null;
+        } else {
+          runnerPrev = runner;
+          runner = runner.next;
+        }
+      }
+      currentNode = currentNode.next;
+    }
+  }
+
   delete(data) {
     if (this.isEmpty()) {
       return false;
@@ -191,24 +214,28 @@ class LinkedList {
   }
 }
 
-// 0 check
+
 const list = new LinkedList();
-console.log(list.indexOf(5)); //undefined
+list.add(1);
+list.add(2);
+list.add(1);
+list.add(2); //head;
+list.print();
 
-list.add('e');
-list.add('d');
-list.add('c');
-list.add('b');
-list.add('a');
+list.dedup();
+console.log();
+list.print();
 
-list.print(); //a,b,c,d,e
-console.log(list.insertAfter(-1)); //false
+list.delete(2);
+list.delete(1);
+console.log();
+list.print();
 
 console.log();
-console.log(list.insertAfter('z', 2)); //true
-list.print(); //a,b,c,z,d,e
-
+list.dedup();
+list.print();
 
 console.log();
-console.log(list.insertAfter('q', 17)); //false
-list.print(); //a,b,c,z,d,e
+list.add(10);
+list.dedup();
+list.print();
