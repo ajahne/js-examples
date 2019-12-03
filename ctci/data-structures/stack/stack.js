@@ -4,6 +4,9 @@ class Stack {
     this.stack = {};
   }
 
+  /**
+   * Adds an item to the top of the stack
+   */
   push(data) {
     if (data) {
       this.stack[this.count] = data;
@@ -14,6 +17,9 @@ class Stack {
     }
   }
 
+  /**
+   * Removes (returns) the top item on the stack
+   */
   pop() {
     if (this.count > 0) {
       this.count--;
@@ -26,6 +32,23 @@ class Stack {
     return value;
   }
 
+  /**
+   * Returns the item on top of the stack without deleting it
+   */
+  peek() {
+    return this.stack[this.count];
+  }
+
+  /**
+   * Returns true if there are not any elements in the stack
+   */
+  empty() {
+    return this.count <= 0;
+  }
+
+  /**
+   * Returns the number of items in the stack
+   */
   size() {
     return this.count;
   }
