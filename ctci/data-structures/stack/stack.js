@@ -40,6 +40,18 @@ class Stack {
   }
 
   /**
+   * Return a string of the items in the stack
+   */
+  print() {
+    let string = '';
+    for (let i = this.size()-1; i >= 0; i--) {
+      // console.log(`\tthis.stack[${i}]: ${this.stack[i]}`);
+      string += this.stack[i] + ',';
+    }
+    console.log(string.substring(0, string.length -1));
+  }
+
+  /**
    * Returns true if there are not any elements in the stack
    */
   isEmpty() {
@@ -72,12 +84,14 @@ console.log('pop: ' + stack.pop());
 console.log('size: ' + stack.size());
 
 console.log();
+stack.print();
 console.log('isEmpty: ' + stack.isEmpty()); //true
 console.log('push a: ' + stack.push('a'));
 console.log('push b: ' + stack.push('b'));
 console.log('push c: ' + stack.push('c'));
 console.log('push d: ' + stack.push('d'));
 console.log('push e: ' + stack.push('e'));
+stack.print();
 console.log('size: ' + stack.size()); //5
 console.log('push ' + stack.push());
 console.log('push ' + stack.push());
