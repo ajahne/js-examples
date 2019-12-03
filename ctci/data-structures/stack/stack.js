@@ -42,7 +42,7 @@ class Stack {
   /**
    * Returns true if there are not any elements in the stack
    */
-  empty() {
+  isEmpty() {
     return this.count <= 0;
   }
 
@@ -72,7 +72,7 @@ console.log('pop: ' + stack.pop());
 console.log('size: ' + stack.size());
 
 console.log();
-console.log('empty: ' + stack.empty()); //true
+console.log('isEmpty: ' + stack.isEmpty()); //true
 console.log('push a: ' + stack.push('a'));
 console.log('push b: ' + stack.push('b'));
 console.log('push c: ' + stack.push('c'));
@@ -89,7 +89,7 @@ console.log('peek: ' + stack.peek()); //d
 console.log('pop: ' + stack.pop());   //d
 console.log('pop: ' + stack.pop());   //c
 console.log('size: ' + stack.size()); //2
-console.log('empty: ' + stack.empty()); //false
+console.log('isEmpty: ' + stack.isEmpty()); //false
 
 console.log();
 const array = [];
