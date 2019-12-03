@@ -7,9 +7,9 @@ class Stack {
   /**
    * Adds an item to the top of the stack
    */
-  push(data) {
-    if (data) {
-      this.stack[this.count] = data;
+  push(item) {
+    if (item) {
+      this.stack[this.count] = item;
       this.count++;
       return true;
     } else {
