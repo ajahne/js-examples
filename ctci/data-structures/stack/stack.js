@@ -36,7 +36,7 @@ class Stack {
    * Returns the item on top of the stack without deleting it
    */
   peek() {
-    return this.stack[this.count];
+    return this.stack[this.count-1];
   }
 
   /**
@@ -56,17 +56,40 @@ class Stack {
 
 
 const stack = new Stack();
-console.log(stack.pop());
-console.log(stack.size());
-console.log(stack.push(1));
-console.log(stack.push());
-console.log(stack.push());
-console.log(stack.push());
-console.log(stack.size());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.pop());
-console.log(stack.size());
+console.log('pop: ' + stack.pop());
+console.log('size: ' + stack.size());
+console.log('peek: ' + stack.peek());
+console.log('push a: ' + stack.push('a'));
+console.log('push ' + stack.push());
+console.log('push ' + stack.push());
+console.log('push ' + stack.push());
+console.log('size: ' + stack.size());
+console.log('peek: ' + stack.peek());
+console.log('pop: ' + stack.pop());
+console.log('peek: ' + stack.peek());
+console.log('pop: ' + stack.pop());
+console.log('pop: ' + stack.pop());
+console.log('size: ' + stack.size());
+
+console.log();
+console.log('empty: ' + stack.empty()); //true
+console.log('push a: ' + stack.push('a'));
+console.log('push b: ' + stack.push('b'));
+console.log('push c: ' + stack.push('c'));
+console.log('push d: ' + stack.push('d'));
+console.log('push e: ' + stack.push('e'));
+console.log('size: ' + stack.size()); //5
+console.log('push ' + stack.push());
+console.log('push ' + stack.push());
+console.log('push ' + stack.push());
+console.log('size: ' + stack.size()); //5
+console.log('peek: ' + stack.peek()); //e
+console.log('pop: ' + stack.pop());   //e
+console.log('peek: ' + stack.peek()); //d
+console.log('pop: ' + stack.pop());   //d
+console.log('pop: ' + stack.pop());   //c
+console.log('size: ' + stack.size()); //2
+console.log('empty: ' + stack.empty()); //false
 
 console.log();
 const array = [];
