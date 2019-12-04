@@ -70,9 +70,16 @@ class Stack {
    * so if stack had a,b then after swap it would be b,a
    */
   swap() {
-    //top item is count -1 (or size-1)
-    //second item is count -2 (or size-2)
+    if (this.count > 1) {
+      //top item is count -1 (or size-1)
+      let topItem = this.stack[this.count-1];
+      //second item is count -2 (or size-2)
+      let secondItem = this.stack[this.count-2];
 
+      //swap the items
+      this.stack[this.count-1] = secondItem;
+      this.stack[this.count-2] = topItem;  
+    }
   }
 }
 
@@ -116,20 +123,29 @@ console.log('size: ' + stack.size()); //2
 stack.print();                        //b,a
 console.log('isEmpty: ' + stack.isEmpty()); //false
 //after swap, stack should be a,b
+stack.swap();
+stack.print();                        //a,b
+stack.swap();
+stack.print();                        //b,a
+stack.pop();
+stack.print();                        //a
+stack.swap();
+stack.print();                        //a
 
-console.log();
-const array = [];
-console.log(array.length);
-console.log(array.push());
-console.log(array.pop());
-console.log(array.pop());
-console.log(array.push(5));
-console.log(array.pop());
 
-
-console.log();
-const o = {};
-o.foo = 'bar';
-console.log(`o.foo = ${o.foo}`);
-delete o.foo;
-console.log(`o.foo = ${o.foo}`);
+// console.log();
+// const array = [];
+// console.log(array.length);
+// console.log(array.push());
+// console.log(array.pop());
+// console.log(array.pop());
+// console.log(array.push(5));
+// console.log(array.pop());
+//
+//
+// console.log();
+// const o = {};
+// o.foo = 'bar';
+// console.log(`o.foo = ${o.foo}`);
+// delete o.foo;
+// console.log(`o.foo = ${o.foo}`);
