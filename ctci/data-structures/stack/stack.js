@@ -64,6 +64,16 @@ class Stack {
   size() {
     return this.count;
   }
+
+  /**
+   * Swap the first two items in the stack.
+   * so if stack had a,b then after swap it would be b,a
+   */
+  swap() {
+    //top item is count -1 (or size-1)
+    //second item is count -2 (or size-2)
+
+  }
 }
 
 
@@ -103,7 +113,9 @@ console.log('peek: ' + stack.peek()); //d
 console.log('pop: ' + stack.pop());   //d
 console.log('pop: ' + stack.pop());   //c
 console.log('size: ' + stack.size()); //2
+stack.print();                        //b,a
 console.log('isEmpty: ' + stack.isEmpty()); //false
+//after swap, stack should be a,b
 
 console.log();
 const array = [];
