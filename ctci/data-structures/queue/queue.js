@@ -8,14 +8,14 @@
 class Queue {
   constructor() {
     this.count = 0;
-    this.queue = {};
+    this.items = {};
   }
 
   /**
    * Add an item to the Queue
    */
   push(item) {
-    this.queue[this.count] = item;
+    this.items[this.count] = item;
     this.count++;
   }
 
@@ -27,10 +27,13 @@ class Queue {
    * pop() //4
    */
   pop() {
-    if (this.isEmpty()) {
-      return false;
-    } else {
-      const item = this.queue[this.count-1];
+    if (!this.isEmpty()) {
+      const item = this.items[0];
+      //shift elements down
+      for (let i = 0; i < this.count; i++) {
+        this.items[i] = this.items[i+1];
+      }
+      delete this.items[this.count-1];
       this.count--;
       return item;
     }
@@ -60,3 +63,6 @@ console.log('pop: ' + queue.pop()); //4
 console.log('pop: ' + queue.pop()); //3
 console.log('pop: ' + queue.pop()); //2
 console.log('pop: ' + queue.pop()); //1
+console.log('pop: ' + queue.pop()); //undefined
+queue.push(7);
+console.log('pop: ' + queue.pop()); //7
