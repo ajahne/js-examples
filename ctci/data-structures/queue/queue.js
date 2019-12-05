@@ -44,6 +44,12 @@ class Queue {
   }
 
   print() {
+    let str = '';
+
+    for (let i = 0; i < this.count; i++) {
+      str += `${this.items[i]},`;
+    }
+    console.log(str.substring(0, str.length-1));
   }
 }
 
@@ -57,6 +63,7 @@ queue.push(4);
 queue.push(3);
 queue.push(2);
 queue.push(1);
+queue.print();
 
 console.log('pop: ' + queue.pop()); //5
 console.log('pop: ' + queue.pop()); //4
