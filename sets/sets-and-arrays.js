@@ -25,3 +25,10 @@ console.log(uniqueArray);
 const unique2 = [...uniqueSet];
 
 console.log(`unique2: ${unique2}`);
+
+const names = ['Alice', 'Bob', 'Claire', 'Peggy', 'Anuj', 'Peggy', 'Thom', 'Jonny'];
+const set = new Set(names);
+const set2 = [...new Set(names)];
+console.log(set);
+console.log([...set]);
+console.log(set2);
